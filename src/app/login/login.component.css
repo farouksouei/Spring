@@ -26,7 +26,7 @@
 }
 
 .header {
-  background-color: #1976d2;
+  background-color: #FFE700;
   color: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -56,12 +56,12 @@
 .login-button {
   width: 100%;
   border-radius: 0 0 10px 10px;
-  background-color: #1976d2;
+  background-color: #FFE700;
   transition: background-color 0.3s;
 }
 
 .login-button:hover {
-  background-color: #1565c0;
+  background-color: #FFE700;
 }
 
 .form-field input {
@@ -85,11 +85,11 @@
 }
 
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-  color: #1976d2;
+  color: #FFE700;
 }
 
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-label {
-  color: #1976d2;
+  color: #FFE700;
 }
 
 .mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-outline-thick {

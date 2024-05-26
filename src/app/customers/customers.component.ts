@@ -92,20 +92,4 @@ export class CustomersComponent implements OnInit {
       }
     });
   }
-
-  openUpdateCustomerDialog(element: any) {
-    const dialogRef = this.dialog.open(UpdateCustomerComponent, {
-      width: '500px',
-      data: {
-        customerData: element // Pass the customer data to the dialog
-      }
-    });
-
-    dialogRef.componentInstance.customerUpdated.subscribe((result: any) => { // <-- Change this line
-      if (result === 'updated') {
-        this.loadCustomers();
-      }
-    });
-  }
-
 }

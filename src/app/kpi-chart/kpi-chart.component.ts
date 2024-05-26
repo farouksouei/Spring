@@ -32,12 +32,12 @@ export class KpiChartComponent implements AfterViewInit, OnDestroy {
       const seriesData: any[] = [];
       this.kpiData.forEach(data => {
         if (data.unite === '%') {
-          // If unit is '%', use gauge chart
+          const contreMesure = 100 - data.mesure;
           seriesData.push({
             name: data.kpi,
-            type: 'gauge',
+            type: 'pie',
             detail: {formatter: '{value}%'},
-            data: [{value: data.mesure, name: data.kpi}]
+            data: [{value: data.mesure, name: data.kpi}, {value: contreMesure, name: 'Contre mesure'}]
           });
         } else {
           // Otherwise, use bar chart

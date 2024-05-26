@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Update Account</h2>
+<form [formGroup]="updateAccount" (ngSubmit)="updateAccountForm()">
+  <mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Balance</mat-label>
+      <input matInput formControlName="balance" type="number" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Created At</mat-label>
+      <input matInput formControlName="createdAt" [matDatepicker]="picker" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Account Status</mat-label>
+      <mat-select formControlName="accountStatus" required>
+        <mat-option *ngFor="let status of accountStatuses" [value]="status">{{status}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Interest Rate</mat-label>
+      <input matInput formControlName="interestRate" required>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="button" (click)="dialogRef.close()">Cancel</button>
+    <button mat-button color="primary" type="submit" [disabled]="updateAccount.invalid">Update</button>
+  </mat-dialog-actions>
+</form>

@@ -1,0 +1,35 @@
+.mat-dialog-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: center;
+}
+
+button[type="submit"] {
+  margin-left: 10px;
+}
+
+button[type="button"] {
+  color: red; /* Cancel button color */
+}
+
+button[type="submit"] {
+  color: white; /* Update button text color */
+  background-color: #007bff; /* Update button background color */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Update button hover background color */
+}

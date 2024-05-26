@@ -1,0 +1,28 @@
+<form [formGroup]="transactionForm" class="transaction-form">
+  <div class="form-container" fxLayout="column" fxLayoutGap="20px">
+    <mat-form-field appearance="outline" class="account-select">
+      <mat-label>From Account</mat-label>
+      <mat-select formControlName="fromAccount">
+        <mat-option *ngFor="let accountId of accountsIds" [value]="accountId">
+          {{ accountId }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="account-select">
+      <mat-label>To Account</mat-label>
+      <mat-select formControlName="toAccount">
+        <mat-option *ngFor="let accountId of allAccountsIds" [value]="accountId">
+          {{ accountId }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" formControlName="amount">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="submit-button" (click)="submit()">Submit</button>
+  </div>
+</form>

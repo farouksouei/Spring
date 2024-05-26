@@ -1,0 +1,3 @@
+<div *ngFor="let group of kpiDataGrouped | keyvalue" style="padding: 10px;margin: 10px;">
+  <app-kpi-chart [title]="group.key" [kpiData]="group.value"></app-kpi-chart>
+</div>

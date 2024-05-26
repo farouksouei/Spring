@@ -1,0 +1,89 @@
+mat-form-field {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.btn-sec {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5em;
+}
+
+.btn-sec.justify-content-center {
+  justify-content: center;
+}
+
+.primary {
+  color: #1976d2;
+}
+
+.add-customer-form {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  display: flex;
+  align-items: center;
+}
+
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-110%);
+  font-size: 0.75em;
+}
+
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-can-float .mat-form-field-underline {
+  display: none;
+}
+
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-can-float .mat-form-field-outline-start,
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-can-float .mat-form-field-outline-end {
+  display: none;
+}
+
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-should-float .mat-form-field-outline {
+  visibility: hidden;
+}
+
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-should-float .mat-form-field-outline-thick {
+  border-color: transparent;
+}
+
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-focused .mat-form-field-outline {
+  visibility: visible;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-subscript-wrapper {
+  display: none;
+}
+
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-invalid .mat-form-field-outline {
+  border-color: #f44336;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-label {
+  color: #757575;
+  font-size: 1em;
+}
+
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-label {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-input-element {
+  color: #212121;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline {
+  display: none;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 1em 0;
+}

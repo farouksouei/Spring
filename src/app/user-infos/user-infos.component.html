@@ -1,0 +1,26 @@
+<mat-card class="user-info-card">
+  <mat-card-header>
+    <mat-card-title class="user-info-title">User Info</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="user-info-item">
+      <span class="label">ID:</span> {{ userId }}
+    </div>
+    <div class="user-info-item">
+      <span class="label">Name:</span> {{ name }}
+    </div>
+    <div class="user-info-item">
+      <span class="label">Email:</span> {{ email }}
+    </div>
+    <div class="user-info-item">
+      <span class="label">Password:</span>
+      <input matInput type="{{ hidePassword ? 'password' : 'text' }}" placeholder="Password" [(ngModel)]="password">
+      <button mat-icon-button (click)="togglePasswordVisibility()">
+        <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="savePassword()">Save</button>
+  </mat-card-actions>
+</mat-card>

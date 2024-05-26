@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="myDrawer.toggle()">
+    <mat-icon>
+      menu
+    </mat-icon>
+  </button>
+  <span style="flex: auto"></span>
+
+  <button mat-button routerLink="/admin/customers" *ngIf="this.authService.roles.includes('ADMIN')">Customers</button>
+  <button mat-button routerLink="/admin/accounts" *ngIf="this.authService.roles.includes('ADMIN')">Accounts</button>
+  <button mat-button *ngIf="this.authService.isAuthenticated">{{ authService.username }}</button>
+  <button (click)="logout()" mat-button mat-raised-button color="accent">Logout</button>
+</mat-toolbar>
+
+<mat-drawer-container>
+  <mat-drawer #myDrawer opened="true" mode="side" position="start">
+    <mat-list>
+      <mat-list-item>
+        <button mat-button routerLink="/admin/my-infos">
+          <mat-icon>info</mat-icon>
+          My Informations
+        </button>
+      </mat-list-item>
+
+      <mat-list-item>
+        <button mat-button routerLink="/admin/dashboard">
+          <mat-icon>dashboard</mat-icon>
+          Dashboard
+        </button>
+      </mat-list-item>
+
+
+
+    </mat-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div style="min-height: 600px">
+      <router-outlet>
+
+      </router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

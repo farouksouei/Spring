@@ -1,0 +1,31 @@
+<div class="container">
+  <form [formGroup]="documentForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="full-width">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" type="text" />
+      <mat-error *ngIf="documentForm.get('name')?.invalid && documentForm.get('name')?.touched">
+        Name is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Timestamp</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="timestamp" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="documentForm.get('timestamp')?.invalid && documentForm.get('timestamp')?.touched">
+        Timestamp is required
+      </mat-error>
+    </mat-form-field>
+
+    <div class="full-width">
+      <mat-label>File</mat-label>
+      <input type="file" (change)="onFileChange($event)" />
+      <mat-error *ngIf="documentForm.get('file')?.invalid && documentForm.get('file')?.touched">
+        File is required
+      </mat-error>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="documentForm.invalid">Upload</button>
+  </form>
+</div>

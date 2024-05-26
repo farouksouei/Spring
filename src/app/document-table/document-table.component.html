@@ -1,0 +1,53 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Document Data</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Axes Column -->
+        <ng-container matColumnDef="axes">
+          <th mat-header-cell *matHeaderCellDef> Axes </th>
+          <td mat-cell *matCellDef="let element"> {{element[0]}} </td>
+        </ng-container>
+
+        <!-- Sous Axes Column -->
+        <ng-container matColumnDef="sousAxes">
+          <th mat-header-cell *matHeaderCellDef> Sous axes </th>
+          <td mat-cell *matCellDef="let element"> {{element[1]}} </td>
+        </ng-container>
+
+        <!-- KPI Column -->
+        <ng-container matColumnDef="kpi">
+          <th mat-header-cell *matHeaderCellDef> KPI </th>
+          <td mat-cell *matCellDef="let element"> {{element[2]}} </td>
+        </ng-container>
+
+        <!-- Measure Column -->
+        <ng-container matColumnDef="measure">
+          <th mat-header-cell *matHeaderCellDef> Measure </th>
+          <td mat-cell *matCellDef="let element"> {{element[3]}} </td>
+        </ng-container>
+
+        <!-- Unit Column -->
+        <ng-container matColumnDef="unit">
+          <th mat-header-cell *matHeaderCellDef> Unit </th>
+          <td mat-cell *matCellDef="let element"> {{element[4]}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </mat-card-content>
+    <div *ngFor="let group of kpiDataGrouped | keyvalue">
+      <h3>{{ group.key }}</h3>
+      <div *ngFor="let data of group.value">
+        <div class="chart-container" style="width: 800px; height: 600px; margin: 30px">
+          <app-kpi-chart [title]="data.kpi" [kpiData]="[data]"></app-kpi-chart>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

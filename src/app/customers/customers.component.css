@@ -1,0 +1,21 @@
+.example-form-field {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  color: #333;
+}
+
+.mat-input-element {
+  border-bottom-color: #333;
+}
+
+.mat-form-field-underline {
+  background-color: transparent;
+}
+
+.mat-form-field-ripple {
+  display: none;
+}
+

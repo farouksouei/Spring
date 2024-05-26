@@ -1,0 +1,18 @@
+.transaction-form {
+  width: 100%;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.account-select {
+  width: 100%;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 20px;
+}

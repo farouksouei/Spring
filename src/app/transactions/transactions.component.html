@@ -1,0 +1,62 @@
+<h4 class="title">Select an account</h4>
+<mat-form-field appearance="outline" class="account-select">
+  <mat-label>Account Id:</mat-label>
+  <mat-select (selectionChange)="accountOperations($event.value)">
+    <mat-option *ngFor="let accountId of accountsIds" [value]="accountId">
+      {{ accountId }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<!-- Add *ngIf to conditionally render search field and table -->
+<div *ngIf="selectedAccountId" class="search-container" style="display: flex">
+  <mat-form-field appearance="outline" class="search-field">
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search transactions">
+    <button mat-icon-button matSuffix color="primary" aria-label="Search">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
+<div *ngIf="selectedAccountId" class="table-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+      <td mat-cell *matCellDef="let element"> {{ element.id }} </td>
+    </ng-container>
+
+    <!-- Date Operation Column -->
+    <ng-container matColumnDef="dateOperation">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Operation Date </th>
+      <td mat-cell *matCellDef="let element"> {{ element.dateOperation | date: 'yyyy-MM-dd' }} </td>
+    </ng-container>
+
+    <!-- Amount Column -->
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Amount </th>
+      <td mat-cell *matCellDef="let element"> {{ element.amount }} </td>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{ element.description }} </td>
+    </ng-container>
+
+    <!-- Operation Type Column -->
+    <ng-container matColumnDef="operationType">
+      <th mat-header-cell *matHeaderCellDef> Operation Type </th>
+      <td mat-cell *matCellDef="let element"> {{ element.operationType }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of transactions">
+  </mat-paginator>
+</div>

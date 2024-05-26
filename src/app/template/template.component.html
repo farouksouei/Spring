@@ -6,7 +6,7 @@
   </button>
   <span style="flex: auto"></span>
 
-  <button mat-button routerLink="/admin/customers" *ngIf="this.authService.roles.includes('ADMIN')">Documents</button>
+  <button mat-button routerLink="/admin/document-add" *ngIf="this.authService.roles.includes('ADMIN')">Documents</button>
   <button mat-button *ngIf="this.authService.isAuthenticated">{{ authService.username }}</button>
   <button (click)="logout()" mat-button mat-raised-button color="accent">Logout</button>
 </mat-toolbar>
@@ -22,15 +22,9 @@
       </mat-list-item>
 
       <mat-list-item>
-        <button mat-button routerLink="/admin/dashboard">
+        <button mat-button routerLink="/admin/customers">
           <mat-icon>dashboard</mat-icon>
-          Dashboard
-        </button>
-      </mat-list-item>
-      <mat-list-item>
-        <button mat-button routerLink="/admin/document-add">
-          <mat-icon>document</mat-icon>
-          document-add
+          All documents
         </button>
       </mat-list-item>
 

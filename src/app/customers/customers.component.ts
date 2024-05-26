@@ -7,6 +7,7 @@ import { ErrorsService } from '../services/errors.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AddCustomerComponent } from "../add-customer/add-customer.component";
 import {UpdateCustomerComponent} from "../update-customer/update-customer.component";
+import {AuthService} from "../services/auth.service";
 
 @Component({
   selector: 'app-customers',
@@ -21,7 +22,8 @@ export class CustomersComponent implements OnInit {
   constructor(
     private customersService: CustomersService,
     private errorService: ErrorsService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    public authService : AuthService
   ) {}
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

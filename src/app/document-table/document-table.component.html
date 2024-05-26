@@ -41,10 +41,10 @@
 
       <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
     </mat-card-content>
-    <div *ngFor="let group of kpiDataGrouped | keyvalue" style="display: flex; justify-content:center">
+    <div *ngFor="let group of kpiDataGrouped | keyvalue">
       <h3>{{ group.key }}</h3>
       <div *ngFor="let data of group.value">
-        <div class="chart-container" style="width: 800px; height: 600px; margin: 30px; display: flex; justify-content:center">
+        <div class="chart-container" style="width: 800px; height: 600px; margin: 30px">
           <app-kpi-chart [title]="data.kpi" [kpiData]="[data]"></app-kpi-chart>
         </div>
       </div>

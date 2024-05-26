@@ -6,8 +6,8 @@
       <mat-icon>search</mat-icon>
     </button>
   </mat-form-field>
-  <button mat-raised-button color="primary" (click)="openAddCustomerDialog()"
-          style="align-self: center; margin-right: 10px">Add Customer
+  <button mat-raised-button color="primary" [routerLink]="['/admin/document-add']"
+          style="align-self: center; margin-right: 10px">Add Document
   </button>
 </div>
 
@@ -23,8 +23,8 @@
 
   <!-- Email Column -->
   <ng-container matColumnDef="email">
-    <th mat-sort-header mat-header-cell *matHeaderCellDef> Email</th>
-    <td mat-cell *matCellDef="let element"> {{ element.email }}</td>
+    <th mat-sort-header mat-header-cell *matHeaderCellDef> timestamp</th>
+    <td mat-cell *matCellDef="let element"> {{ element.timestamp | date }}</td>
   </ng-container>
 
   <!-- Update Column -->

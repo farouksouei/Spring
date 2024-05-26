@@ -1,0 +1,46 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+.mat-label {
+  font-weight: 500;
+}
+
+mat-error {
+  font-size: 0.875em;
+  color: #d32f2f;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+}
+
+input[type="file"] {
+  display: block;
+  margin-top: 8px;
+}
+
+button[mat-raised-button] {
+  margin-top: 16px;
+}

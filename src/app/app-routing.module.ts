@@ -11,6 +11,7 @@ import {AuthenticationGuard} from "./guards/authentication.guard";
 import {UserInfosComponent} from "./user-infos/user-infos.component";
 import {MyAccountsComponent} from "./my-accounts/my-accounts.component";
 import {DocumentTableComponent} from "./document-table/document-table.component";
+import {DocumentEntryComponent} from "./document-entry/document-entry.component";
 
 const routes: Routes = [
   {path: "", component: LoginComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
       {path: "customers", component: CustomersComponent},
       {path: "accounts", component: AccountsComponent},
       {path: "transactions", component: TransactionsComponent},
-      {path: "document/:id", component: DocumentTableComponent}
+      {path: "document/:id", component: DocumentTableComponent},
+      {path: "document-add", component: DocumentEntryComponent}
     ]
   }
 

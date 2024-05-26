@@ -15,6 +15,7 @@ export class DocumentTableComponent implements OnInit {
   displayedColumns: string[] = ['axes', 'sousAxes', 'kpi', 'measure', 'unit'];
   dataSource: MatTableDataSource<string[]>;
   kpiDataGrouped: { [key: string]: KpiData[] } = {};
+  kpiDataGroupedBySousAxes: any;
   GetAxes: any;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -25,7 +26,7 @@ export class DocumentTableComponent implements OnInit {
 
   ngOnInit(): void {
     const documentId = this.route.snapshot.paramMap.get('id');
-    this.http.get<DocumentEntryDTO>(`http://localhost:8085/documents/1`).subscribe(
+    this.http.get<DocumentEntryDTO>(`http://localhost:8085/documents/`+documentId).subscribe(
       (data) => {
         this.dataSource.data = data.parsedData;
         console.log('Document data', data.parsedData)
@@ -43,10 +44,13 @@ export class DocumentTableComponent implements OnInit {
         this.dataSource.data = this.dataSource.data.slice(1);
 
         const FirstSixtyRows = this.dataSource.data.slice(0, 60);
-        this.kpiDataGrouped = this.kpiDataService.getKpiDataGroupedByAxes(FirstSixtyRows);
+        this.kpiDataGrouped = this.kpiDataService.getKpiDataGroupedBySousAxes(FirstSixtyRows);
         // remove the first row (headers)
 
-        console.log('kpiDataGrouped', this.kpiDataGrouped);
+
+
+        // group them by SousAxes loop through every axe and create a group of data for each sousaxe so i can loop over it
+
 
 
 

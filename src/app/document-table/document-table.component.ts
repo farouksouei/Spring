@@ -44,8 +44,9 @@ export class DocumentTableComponent implements OnInit {
         this.dataSource.data = this.dataSource.data.slice(1);
 
         const FirstSixtyRows = this.dataSource.data.slice(0, 60);
-        this.kpiDataGrouped = this.kpiDataService.getKpiDataGroupedBySousAxes(FirstSixtyRows);
+        this.kpiDataGrouped = this.kpiDataService.getKpiDataGroupedByAxes(FirstSixtyRows);
         // remove the first row (headers)
+        console.log('Grouped data', this.kpiDataGrouped);
 
 
 

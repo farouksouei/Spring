@@ -13,19 +13,19 @@ export class CustomersService {
   }
 
   getAllCustomers(): Observable<Customer[]> {
-    return this.http.get<Customer[]>(`${environment.backendHost}/customers`);
+    return this.http.get<Customer[]>(`${environment.backendHost}/documents`);
   }
 
   getCustomer(id: number): Observable<Customer> {
-    return this.http.get<Customer>(`${environment.backendHost}/customers/${id}`);
+    return this.http.get<Customer>(`${environment.backendHost}/documents/${id}`);
   }
 
   deleteCustomer(id: number): Observable<void> {
-    return this.http.delete<void>(`${environment.backendHost}/delete-customer/${id}`);
+    return this.http.delete<void>(`${environment.backendHost}/delete-documents/${id}`);
   }
 
   saveCustomer(customer: Customer): Observable<Customer> {
-    return this.http.post<Customer>(`${environment.backendHost}/add-customer`, customer);
+    return this.http.post<Customer>(`${environment.backendHost}/documents`, customer);
   }
 
   updateCustomer(customer: Customer): Observable<Customer> {

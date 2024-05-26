@@ -48,16 +48,7 @@ export class DocumentTableComponent implements OnInit {
 
         console.log('kpiDataGrouped', this.kpiDataGrouped);
 
-        // get an array of axes
-        const axesGroupedData: { [key: string]: KpiData[] } = {};
-        transformedData.forEach(data => {
-          if (!axesGroupedData[data.axes]) {
-            axesGroupedData[data.axes] = [];
-          }
-          axesGroupedData[data.axes].push(data);
-        });
 
-        this.kpiDataGrouped = axesGroupedData;
 
         this.dataSource.paginator = this.paginator;
       },

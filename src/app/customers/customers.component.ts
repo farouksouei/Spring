@@ -16,7 +16,7 @@ import {UpdateCustomerComponent} from "../update-customer/update-customer.compon
 export class CustomersComponent implements OnInit {
   public customers: any;
   public dataSource: any;
-  public displayedColumns = ['id', 'name', 'email', 'update', 'delete'];
+  public displayedColumns = ['name', 'email', 'view', 'delete'];
 
   constructor(
     private customersService: CustomersService,

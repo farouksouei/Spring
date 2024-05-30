@@ -25,15 +25,20 @@ export class UserListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUsers(0, this.pageSize);
+    console.log("dataSource",this.dataSource)
   }
 
   getUsers(page: number, size: number): void {
     this.userService.getUsers(page, size).subscribe(data => {
-      this.dataSource.data = data.content;
+      this.dataSource.data = data;
+      console.log("dataSource",data)
       this.totalUsers = data.totalElements;
       this.pageSize = data.size;
     });
   }
+
+  // log all users
+
 
   onPageChange(event: any): void {
     this.getUsers(event.pageIndex, event.pageSize);

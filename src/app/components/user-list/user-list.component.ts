@@ -6,6 +6,7 @@ import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 import { UserFormComponent } from '../user-form/user-form.component';
 import { UserUpdateComponent } from '../user-update/user-update.component';
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-user-list',
@@ -20,7 +21,7 @@ export class UserListComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private userService: UserService, private dialog: MatDialog) {}
+  constructor(private userService: UserService, private dialog: MatDialog,public authService : AuthService) {}
 
   ngOnInit(): void {
     this.getUsers(0, this.pageSize);

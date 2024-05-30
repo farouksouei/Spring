@@ -12,7 +12,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getUsers(page: number, size: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}?page=${page}&size=${size}`);
+    return this.http.get(`${this.baseUrl}`);
   }
 
   getUser(id: number): Observable<User> {

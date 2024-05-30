@@ -28,6 +28,13 @@
         </button>
       </mat-list-item>
 
+      <mat-list-item *ngIf="this.authService.roles.includes('ADMIN')">
+        <button mat-button routerLink="/admin/userlist">
+          <mat-icon>dashboard</mat-icon>
+          All Users
+        </button>
+      </mat-list-item>
+
 
     </mat-list>
   </mat-drawer>

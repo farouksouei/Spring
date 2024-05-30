@@ -43,7 +43,7 @@ export class DocumentEntryComponent {
           (response: any) => {
           console.log('Document uploaded successfully', response);
           // redirect to /documents
-            window.location.href="http://myserver.com/oauth2/";
+            window.location.href="http://localhost:4200/documents";
           },
           (error: any) => {
           console.error('Error uploading document', error);

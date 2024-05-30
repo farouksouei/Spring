@@ -34,6 +34,8 @@ import {MatNativeDateModule, MatOptionModule} from "@angular/material/core";
 import {MatSortModule} from "@angular/material/sort";
 import {MatTab, MatTabGroup} from "@angular/material/tabs";
 import { UpdateAccountComponent } from './update-account/update-account.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 import {
   MatDatepicker,
   MatDatepickerInput,
@@ -51,7 +53,12 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import {MatSlideToggle} from "@angular/material/slide-toggle";
 import { UserUpdateComponent } from './components/user-update/user-update.component';
-
+import { FinanceComponent } from './finance/finance.component';
+import {MatGridList, MatGridTile} from "@angular/material/grid-list";
+import { ArchitectureComponent } from './architecture/architecture.component';
+import { ProcessusComponent } from './processus/processus.component';
+import {ProcessusItComponent} from "./processus-it/processus-it.component";
+import { OutilsEtApplicationsComponent } from './outils-et-applications/outils-et-applications.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,6 +83,11 @@ import { UserUpdateComponent } from './components/user-update/user-update.compon
     UserListComponent,
     UserFormComponent,
     UserUpdateComponent,
+    FinanceComponent,
+    ArchitectureComponent,
+    ProcessusComponent,
+    ProcessusItComponent,
+    OutilsEtApplicationsComponent,
   ],
   imports: [
     BrowserModule,
@@ -116,7 +128,10 @@ import { UserUpdateComponent } from './components/user-update/user-update.compon
     MatDatepickerModule,
     MatNativeDateModule,
     NgOptimizedImage,
-    MatSlideToggle
+    MatSlideToggle,
+    NgxChartsModule,
+    MatGridTile,
+    MatGridList
   ],
   providers: [
     provideAnimationsAsync(),

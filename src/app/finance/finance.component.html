@@ -1,0 +1,61 @@
+<div class="container">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Budget Utilization and ROI</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <ngx-charts-bar-vertical
+            [view]="budgetUtilizationChartView"
+            [results]="budgetUtilizationChartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel">
+          </ngx-charts-bar-vertical>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Other Metrics</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <ngx-charts-line-chart
+            [view]="otherChartView"
+            [results]="otherChartData"
+            [gradient]="lineGradient"
+            [xAxis]="lineShowXAxis"
+            [yAxis]="lineShowYAxis"
+            [legend]="lineShowLegend"
+            [showXAxisLabel]="lineShowXAxisLabel"
+            [showYAxisLabel]="lineShowYAxisLabel"
+            [xAxisLabel]="lineXAxisLabel"
+            [yAxisLabel]="lineYAxisLabel">
+          </ngx-charts-line-chart>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Performance Index</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <ngx-charts-bar-vertical
+            [view]="performanceIndexChartView"
+            [results]="performanceIndexChartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel">
+          </ngx-charts-bar-vertical>
+        </mat-card-content>
+      </mat-card>
+</div>

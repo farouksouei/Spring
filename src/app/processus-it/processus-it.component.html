@@ -1,0 +1,79 @@
+<div class="container">
+  <!-- Budget Chart -->
+  <ngx-charts-bar-vertical
+    *ngIf="projectStatusChartData.length > 0"
+    [view]="view"
+    [results]="projectStatusChartData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel">
+  </ngx-charts-bar-vertical>
+
+  <!-- User Satisfaction Chart -->
+  <ngx-charts-bar-vertical
+    *ngIf="userSatisfactionChartData.length > 0"
+    [view]="view"
+    [results]="userSatisfactionChartData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel">
+  </ngx-charts-bar-vertical>
+
+
+  <!-- Stakeholder Satisfaction Chart -->
+  <ngx-charts-bar-vertical
+    *ngIf="stakeholderSatisfactionChartData.length > 0"
+    [view]="view"
+    [results]="stakeholderSatisfactionChartData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel">
+  </ngx-charts-bar-vertical>
+
+  <!-- Incident Frequency Chart -->
+  <ngx-charts-bar-vertical
+    *ngIf="incidentFrequencyChartData.length > 0"
+    [view]="view"
+    [results]="incidentFrequencyChartData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel">
+  </ngx-charts-bar-vertical>
+
+  <!-- Estimation Chart -->
+  <ngx-charts-bar-vertical
+    *ngIf="estimationChartData.length > 0"
+    [view]="view"
+    [results]="estimationChartData"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel">
+  </ngx-charts-bar-vertical>
+</div>
+
+

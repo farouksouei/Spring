@@ -45,15 +45,19 @@
       <ng-container *ngFor="let group of kpiDataGrouped | keyvalue">
         Budget et Performance Financière
         <ng-container *ngIf="group.key">
-          <mat-tab label="{{ group.key }}">
+          <mat-tab label="{{ group.key }}" *ngIf="group.key != 'Architecture SI'">
             <div *ngIf="group.key == 'Organisation et staffing'" class="chart-container" style="width: 800px; height: 600px; margin: 30px">
-              hello
-              <app-staffing [kpiDataGrouped]="[group]"></app-staffing>
+              <app-staffing [data]="[group]"></app-staffing>
+              Budget et Performance Financière
             </div>
-            <div *ngFor="let data of group.value">
-              <div class="chart-container" style="width: 800px; height: 600px; margin: 30px">
-                <app-kpi-chart [title]="data.kpi" [kpiData]="[data]"></app-kpi-chart>
-              </div>
+            <div *ngIf="group.key == 'Budget et Performance Financière'" class="chart-container" style="width: 800px; height: 600px; margin: 30px">
+              <app-finance [data]="[group]"></app-finance>
+            </div>
+            <div *ngIf="group.key == 'Processus IT'" class="chart-container" style="width: 800px; height: 600px; margin: 30px">
+              <app-processus-it></app-processus-it>
+            </div>
+            <div *ngIf="group.key == 'Outils et applications'" class="chart-container" style="width: 800px; height: 600px; margin: 30px">
+              <app-outils-et-applications></app-outils-et-applications>
             </div>
           </mat-tab>
         </ng-container>

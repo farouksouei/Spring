@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <mat-card *ngIf="projectStatusChartData.length > 0" style="margin-bottom: 5px;">
-        <mat-card-content>
+        <mat-card-content  class="chart-container">
           <!-- Budget Chart -->
           <ngx-charts-bar-vertical
             [view]="view"
@@ -19,9 +19,11 @@
         </mat-card-content>
       </mat-card>
     </div>
-    <div class="col-md-6">
+  </div>
+  <div class="row">
+    <div class="col-md-12">
       <mat-card *ngIf="userSatisfactionChartData.length > 0" style="margin-bottom: 5px;">
-        <mat-card-content>
+        <mat-card-content  class="chart-container">
           <!-- User Satisfaction Chart -->
           <ngx-charts-bar-vertical
             [view]="view"
@@ -40,9 +42,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <mat-card *ngIf="stakeholderSatisfactionChartData.length > 0" style="margin-bottom: 5px;">
-        <mat-card-content>
+        <mat-card-content  class="chart-container">
           <!-- Stakeholder Satisfaction Chart -->
           <ngx-charts-bar-vertical
             [view]="view"
@@ -59,9 +61,11 @@
         </mat-card-content>
       </mat-card>
     </div>
-    <div class="col-md-6">
+  </div>
+  <div class="row">
+    <div class="col-md-12">
       <mat-card *ngIf="incidentFrequencyChartData.length > 0" style="margin-bottom: 5px;">
-        <mat-card-content>
+        <mat-card-content  class="chart-container">
           <!-- Incident Frequency Chart -->
           <ngx-charts-bar-vertical
             [view]="view"
@@ -80,9 +84,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <mat-card *ngIf="estimationChartData.length > 0" style="margin-bottom: 5px;">
-        <mat-card-content>
+        <mat-card-content  class="chart-container">
           <!-- Estimation Chart -->
           <ngx-charts-bar-vertical
             [view]="view"

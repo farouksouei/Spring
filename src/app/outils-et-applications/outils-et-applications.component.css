@@ -1,0 +1,16 @@
+.chart-card {
+  margin-bottom: 10px;
+}
+
+.chart-card mat-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.chart-card ngx-charts-bar-vertical,
+.chart-card ngx-charts-pie-chart {
+  max-width: 100%;
+  max-height: 100%;
+}

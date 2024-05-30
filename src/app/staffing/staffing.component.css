@@ -1,5 +1,17 @@
-.chart-container {
-  width: 800px;
-  height: 400px;
-  margin: 20px auto;
+.chart-card {
+  margin-bottom: 10px;
+  width: calc(50% - 10px); /* Adjust width as needed */
+}
+
+.chart-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.chart-content ngx-charts-gauge,
+.chart-content ngx-charts-line-chart {
+  max-width: 100%;
+  max-height: 100%;
 }

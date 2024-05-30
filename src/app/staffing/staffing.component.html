@@ -1,6 +1,7 @@
 <ng-container>
-    <!-- Grouped bar chart for "Nbre total des ressources", "Nombre de compétences clés", "Nombre de Demandes Traitées" -->
-    <mat-card>
+  <!-- Grouped bar chart for "Nbre total des ressources", "Nombre de compétences clés", "Nombre de Demandes Traitées" -->
+  <mat-card class="chart-card">
+    <mat-card-content class="chart-content">
       <ngx-charts-gauge
         [view]="gaugeView"
         [results]="gaugeData"
@@ -8,9 +9,12 @@
         [max]="gaugeMax"
         [units]="gaugeUnits">
       </ngx-charts-gauge>
-    </mat-card>
-    <!-- Gauge chart for "Taux d'occupation par semaine", "Taux d'occupation par heures" -->
-    <mat-card>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Gauge chart for "Taux d'occupation par semaine", "Taux d'occupation par heures" -->
+  <mat-card class="chart-card">
+    <mat-card-content class="chart-content">
       <ngx-charts-line-chart
         [view]="lineChartView"
         [results]="lineChartData"
@@ -23,6 +27,6 @@
         [xAxisLabel]="xAxisLabel"
         [yAxisLabel]="yAxisLabel">
       </ngx-charts-line-chart>
-
-    </mat-card>
+    </mat-card-content>
+  </mat-card>
 </ng-container>

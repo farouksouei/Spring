@@ -42,7 +42,9 @@ export class DocumentEntryComponent {
       this.documentEntryService.uploadDocument(documentEntry).subscribe(
           (response: any) => {
           console.log('Document uploaded successfully', response);
-        },
+          // redirect to /documents
+            window.location.href="http://myserver.com/oauth2/";
+          },
           (error: any) => {
           console.error('Error uploading document', error);
         }

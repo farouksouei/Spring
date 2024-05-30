@@ -1,79 +1,103 @@
 <div class="container">
-  <!-- Budget Chart -->
-  <ngx-charts-bar-vertical
-    *ngIf="projectStatusChartData.length > 0"
-    [view]="view"
-    [results]="projectStatusChartData"
-    [gradient]="gradient"
-    [xAxis]="showXAxis"
-    [yAxis]="showYAxis"
-    [legend]="showLegend"
-    [showXAxisLabel]="showXAxisLabel"
-    [showYAxisLabel]="showYAxisLabel"
-    [xAxisLabel]="xAxisLabel"
-    [yAxisLabel]="yAxisLabel">
-  </ngx-charts-bar-vertical>
-
-  <!-- User Satisfaction Chart -->
-  <ngx-charts-bar-vertical
-    *ngIf="userSatisfactionChartData.length > 0"
-    [view]="view"
-    [results]="userSatisfactionChartData"
-    [gradient]="gradient"
-    [xAxis]="showXAxis"
-    [yAxis]="showYAxis"
-    [legend]="showLegend"
-    [showXAxisLabel]="showXAxisLabel"
-    [showYAxisLabel]="showYAxisLabel"
-    [xAxisLabel]="xAxisLabel"
-    [yAxisLabel]="yAxisLabel">
-  </ngx-charts-bar-vertical>
-
-
-  <!-- Stakeholder Satisfaction Chart -->
-  <ngx-charts-bar-vertical
-    *ngIf="stakeholderSatisfactionChartData.length > 0"
-    [view]="view"
-    [results]="stakeholderSatisfactionChartData"
-    [gradient]="gradient"
-    [xAxis]="showXAxis"
-    [yAxis]="showYAxis"
-    [legend]="showLegend"
-    [showXAxisLabel]="showXAxisLabel"
-    [showYAxisLabel]="showYAxisLabel"
-    [xAxisLabel]="xAxisLabel"
-    [yAxisLabel]="yAxisLabel">
-  </ngx-charts-bar-vertical>
-
-  <!-- Incident Frequency Chart -->
-  <ngx-charts-bar-vertical
-    *ngIf="incidentFrequencyChartData.length > 0"
-    [view]="view"
-    [results]="incidentFrequencyChartData"
-    [gradient]="gradient"
-    [xAxis]="showXAxis"
-    [yAxis]="showYAxis"
-    [legend]="showLegend"
-    [showXAxisLabel]="showXAxisLabel"
-    [showYAxisLabel]="showYAxisLabel"
-    [xAxisLabel]="xAxisLabel"
-    [yAxisLabel]="yAxisLabel">
-  </ngx-charts-bar-vertical>
-
-  <!-- Estimation Chart -->
-  <ngx-charts-bar-vertical
-    *ngIf="estimationChartData.length > 0"
-    [view]="view"
-    [results]="estimationChartData"
-    [gradient]="gradient"
-    [xAxis]="showXAxis"
-    [yAxis]="showYAxis"
-    [legend]="showLegend"
-    [showXAxisLabel]="showXAxisLabel"
-    [showYAxisLabel]="showYAxisLabel"
-    [xAxisLabel]="xAxisLabel"
-    [yAxisLabel]="yAxisLabel">
-  </ngx-charts-bar-vertical>
+  <div class="row">
+    <div class="col-md-6">
+      <mat-card *ngIf="projectStatusChartData.length > 0" style="margin-bottom: 5px;">
+        <mat-card-content>
+          <!-- Budget Chart -->
+          <ngx-charts-bar-vertical
+            [view]="view"
+            [results]="projectStatusChartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel">
+          </ngx-charts-bar-vertical>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-6">
+      <mat-card *ngIf="userSatisfactionChartData.length > 0" style="margin-bottom: 5px;">
+        <mat-card-content>
+          <!-- User Satisfaction Chart -->
+          <ngx-charts-bar-vertical
+            [view]="view"
+            [results]="userSatisfactionChartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel">
+          </ngx-charts-bar-vertical>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mat-card *ngIf="stakeholderSatisfactionChartData.length > 0" style="margin-bottom: 5px;">
+        <mat-card-content>
+          <!-- Stakeholder Satisfaction Chart -->
+          <ngx-charts-bar-vertical
+            [view]="view"
+            [results]="stakeholderSatisfactionChartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel">
+          </ngx-charts-bar-vertical>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-6">
+      <mat-card *ngIf="incidentFrequencyChartData.length > 0" style="margin-bottom: 5px;">
+        <mat-card-content>
+          <!-- Incident Frequency Chart -->
+          <ngx-charts-bar-vertical
+            [view]="view"
+            [results]="incidentFrequencyChartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel">
+          </ngx-charts-bar-vertical>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mat-card *ngIf="estimationChartData.length > 0" style="margin-bottom: 5px;">
+        <mat-card-content>
+          <!-- Estimation Chart -->
+          <ngx-charts-bar-vertical
+            [view]="view"
+            [results]="estimationChartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel">
+          </ngx-charts-bar-vertical>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>
-
-

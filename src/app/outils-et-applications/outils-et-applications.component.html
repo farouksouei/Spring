@@ -1,58 +1,83 @@
 <div class="container">
-  <!-- Test Success and Availability Chart -->
-  <ngx-charts-bar-vertical
-    [view]="view"
-    [results]="testSuccessAvailabilityChartData"
-    [gradient]="gradient"
-    [xAxis]="showXAxis"
-    [yAxis]="showYAxis"
-    [legend]="showLegend"
-    [showXAxisLabel]="showXAxisLabel"
-    [xAxisLabel]="xAxisLabel"
-    [showYAxisLabel]="showYAxisLabel"
-    [yAxisLabel]="yAxisLabel"
-    >
-  </ngx-charts-bar-vertical>
-
-  <!-- User Satisfaction Chart -->
-  <ngx-charts-pie-chart
-    [view]="view"
-    [results]="userSatisfactionChartData"
-    [gradient]="gradient"
-    [legend]="showLegend"
-    [labels]="showLegend"
-    [doughnut]="true"
-    [explodeSlices]="false"
-    >
-  </ngx-charts-pie-chart>
-
-  <!-- Tool Adoption and Usage Chart -->
-  <ngx-charts-bar-vertical
-    [view]="view"
-    [results]="toolAdoptionUsageChartData"
-    [gradient]="gradient"
-    [xAxis]="showXAxis"
-    [yAxis]="showYAxis"
-    [legend]="showLegend"
-    [showXAxisLabel]="showXAxisLabel"
-    [xAxisLabel]="xAxisLabel"
-    [showYAxisLabel]="showYAxisLabel"
-    [yAxisLabel]="yAxisLabel"
-    >
-  </ngx-charts-bar-vertical>
-
-  <!-- Security Vulnerabilities Chart -->
-  <ngx-charts-bar-vertical
-    [view]="view"
-    [results]="securityVulnerabilitiesChartData"
-    [gradient]="gradient"
-    [xAxis]="showXAxis"
-    [yAxis]="showYAxis"
-    [legend]="showLegend"
-    [showXAxisLabel]="showXAxisLabel"
-    [xAxisLabel]="xAxisLabel"
-    [showYAxisLabel]="showYAxisLabel"
-    [yAxisLabel]="yAxisLabel"
-    >
-  </ngx-charts-bar-vertical>
+  <div class="row">
+    <div class="col-md-6">
+      <mat-card style="margin-bottom: 5px;">
+        <mat-card-content>
+          <!-- Test Success and Availability Chart -->
+          <ngx-charts-bar-vertical
+            [view]="view"
+            [results]="testSuccessAvailabilityChartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+          >
+          </ngx-charts-bar-vertical>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-6">
+      <mat-card style="margin-bottom: 5px;">
+        <mat-card-content>
+          <!-- User Satisfaction Chart -->
+          <ngx-charts-pie-chart
+            [view]="view"
+            [results]="userSatisfactionChartData"
+            [gradient]="gradient"
+            [legend]="showLegend"
+            [labels]="showLegend"
+            [doughnut]="true"
+            [explodeSlices]="false"
+          >
+          </ngx-charts-pie-chart>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mat-card style="margin-bottom: 5px;">
+        <mat-card-content>
+          <!-- Tool Adoption and Usage Chart -->
+          <ngx-charts-bar-vertical
+            [view]="view"
+            [results]="toolAdoptionUsageChartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+          >
+          </ngx-charts-bar-vertical>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="">
+      <mat-card style="margin-bottom: 5px;">
+        <mat-card-content>
+          <!-- Security Vulnerabilities Chart -->
+          <ngx-charts-bar-vertical
+            [view]="view"
+            [results]="securityVulnerabilitiesChartData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+          >
+          </ngx-charts-bar-vertical>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>

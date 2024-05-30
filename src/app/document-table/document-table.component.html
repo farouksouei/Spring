@@ -42,13 +42,22 @@
       <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
     </mat-card-content>
     <mat-tab-group>
-      <mat-tab *ngFor="let group of kpiDataGrouped | keyvalue" label="{{ group.key }}">
-        <div *ngFor="let data of group.value">
-          <div class="chart-container" style="width: 800px; height: 600px; margin: 30px">
-            <app-kpi-chart [title]="data.kpi" [kpiData]="[data]"></app-kpi-chart>
-          </div>
-        </div>
-      </mat-tab>
+      <ng-container *ngFor="let group of kpiDataGrouped | keyvalue">
+        Budget et Performance Financière
+        <ng-container *ngIf="group.key">
+          <mat-tab label="{{ group.key }}">
+            <div *ngIf="group.key == 'Organisation et staffing'" class="chart-container" style="width: 800px; height: 600px; margin: 30px">
+              hello
+              <app-staffing [kpiDataGrouped]="[group]"></app-staffing>
+            </div>
+            <div *ngFor="let data of group.value">
+              <div class="chart-container" style="width: 800px; height: 600px; margin: 30px">
+                <app-kpi-chart [title]="data.kpi" [kpiData]="[data]"></app-kpi-chart>
+              </div>
+            </div>
+          </mat-tab>
+        </ng-container>
+      </ng-container>
     </mat-tab-group>
   </mat-card>
 </div>

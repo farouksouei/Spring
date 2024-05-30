@@ -1,0 +1,18 @@
+<ng-container *ngFor="let group of kpiDataGrouped">
+  <ng-container *ngIf="group.key">
+    <mat-tab label="{{ group.key }}">
+      <!-- Grouped bar chart for "Nbre total des ressources", "Nombre de compétences clés", "Nombre de Demandes Traitées" -->
+      <mat-card>
+        <mat-card-content>
+          <div id="{{ group.key }}-grouped" class="chart-container" style="width: 100%; height: 400px;"></div>
+        </mat-card-content>
+      </mat-card>
+      <!-- Gauge chart for "Taux d'occupation par semaine", "Taux d'occupation par heures" -->
+      <mat-card>
+        <mat-card-content>
+          <div id="{{ group.key }}-gauge" class="chart-container" style="width: 100%; height: 400px;"></div>
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+  </ng-container>
+</ng-container>

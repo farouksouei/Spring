@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import {KpiData} from "../kpi-data.model";
 import {KpiDataService} from "../kpi-data.service";
+import {group} from "@angular/animations";
 
 @Component({
   selector: 'app-document-table',
@@ -68,6 +69,9 @@ export class DocumentTableComponent implements OnInit {
   getAxesData(axes: string): KpiData[] {
     return this.kpiDataGrouped[axes];
   }
+
+  protected readonly console = console;
+  protected readonly group = group;
 }
 
 interface DocumentEntryDTO {

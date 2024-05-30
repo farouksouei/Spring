@@ -12,6 +12,7 @@ import {UserInfosComponent} from "./user-infos/user-infos.component";
 import {MyAccountsComponent} from "./my-accounts/my-accounts.component";
 import {DocumentTableComponent} from "./document-table/document-table.component";
 import {DocumentEntryComponent} from "./document-entry/document-entry.component";
+import {UserListComponent} from "./components/user-list/user-list.component"
 
 const routes: Routes = [
   {path: "", component: LoginComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
       {path: "accounts", component: AccountsComponent},
       {path: "transactions", component: TransactionsComponent},
       {path: "document/:id", component: DocumentTableComponent},
-      {path: "document-add", component: DocumentEntryComponent}
+      {path: "document-add", component: DocumentEntryComponent},
+      {path: "userlist", component: UserListComponent},
     ]
   }
 

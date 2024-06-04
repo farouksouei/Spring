@@ -4,12 +4,26 @@
     <mat-form-field appearance="fill">
       <mat-label>Username</mat-label>
       <input matInput formControlName="username">
+      <mat-error *ngIf="userForm.get('username')?.errors && userForm.get('username')?.errors?.['required']">
+        Username is required
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>Password</mat-label>
       <input matInput type="password" formControlName="password">
+      <mat-error *ngIf="userForm.get('password')?.errors && userForm.get('password')?.errors?.['required']">
+        Password is required
+      </mat-error>
+      <mat-error *ngIf="userForm.get('password')?.errors && userForm.get('password')?.errors?.['minlength']">
+        Password must be at least 8 characters
+      </mat-error>
+      <mat-error *ngIf="userForm.get('password')?.errors && userForm.get('password')?.errors?.['noNumber']">
+        Password must contain at least one number
+      </mat-error>
     </mat-form-field>
+
+    <!-- Rest of your form -->
 
     <mat-form-field appearance="fill">
       <mat-label>Roles</mat-label>

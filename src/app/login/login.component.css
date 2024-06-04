@@ -99,3 +99,7 @@
 .mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-label {
   color: #f44336;
 }
+
+.error-message {
+  color: red;
+}

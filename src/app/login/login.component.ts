@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../services/auth.service";
 import {Router} from "@angular/router";
 
@@ -10,6 +10,7 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
   formLogin!: FormGroup;
+  loginError: string; // Add this line
 
   constructor(private formBuilder: FormBuilder,
               private authService: AuthService,
@@ -18,8 +19,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.formLogin = this.formBuilder.group({
-      username: [''],
-      password: ['']
+      username: ['', Validators.required],
+      password: ['', Validators.required]
     });
   }
 
@@ -34,6 +35,7 @@ export class LoginComponent implements OnInit {
       },
       error: err => {
         console.log(err);
+        this.loginError = 'Incorrect username or password'; // Add this line
       }
     });
   }

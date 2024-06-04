@@ -9,6 +9,7 @@ export class StaffingComponent implements OnInit, OnChanges {
   @Input() data: any[] = [];
 
   gaugeData: any[] = [];
+  gaugeData2 : any[] = [];
   lineChartData: any[] = [];
 
   // Gauge chart options
@@ -18,7 +19,7 @@ export class StaffingComponent implements OnInit, OnChanges {
   gaugeUnits = '%';
 
   // Line chart options
-  lineChartView: [number, number] = [700, 400];
+  lineChartView: [number, number] = [1000, 700];
   lineChartColorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
@@ -60,4 +61,6 @@ export class StaffingComponent implements OnInit, OnChanges {
       ];
     }
   }
+
+  protected readonly console = console;
 }

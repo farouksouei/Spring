@@ -1,17 +1,17 @@
+/* CSS for the chart card */
 .chart-card {
-  margin-bottom: 10px;
-  width: calc(50% - 10px); /* Adjust width as needed */
+  width: 100%; /* Make the card full width */
+  display: flex; /* Use flexbox to center the chart */
+  justify-content: center; /* Center the chart horizontally */
+  align-items: center; /* Center the chart vertically */
+  margin: 10px;
 }
 
+/* CSS for the chart content */
 .chart-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.chart-content ngx-charts-gauge,
-.chart-content ngx-charts-line-chart {
-  max-width: 100%;
-  max-height: 100%;
+  height: 700px; /* Increase the height of the chart */
+  width: 100%; /* Make the chart full width */
+  display: flex; /* Use flexbox to center the chart */
+  justify-content: center; /* Center the chart horizontally */
+  align-items: center; /* Center the chart vertically */
 }

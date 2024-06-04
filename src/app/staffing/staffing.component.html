@@ -1,14 +1,17 @@
 <ng-container>
   <!-- Grouped bar chart for "Nbre total des ressources", "Nombre de compétences clés", "Nombre de Demandes Traitées" -->
-  <mat-card class="chart-card">
+  <mat-card class="chart-card" *ngFor="let item of gaugeData">
     <mat-card-content class="chart-content">
+      <div style="display: inline-block;justify-content: center;align-items: center">
       <ngx-charts-gauge
         [view]="gaugeView"
-        [results]="gaugeData"
+        [results]="[item]"
         [min]="gaugeMin"
         [max]="gaugeMax"
         [units]="gaugeUnits">
       </ngx-charts-gauge>
+      <h1>{{ item.name }}</h1>
+      </div>
     </mat-card-content>
   </mat-card>
 

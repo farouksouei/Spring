@@ -13,7 +13,7 @@ export class FinanceComponent implements OnInit, OnChanges {
   performanceIndexChartData: any[] = [];
 
   // Bar chart options for budget utilization and ROI
-  budgetUtilizationChartView: [number, number] = [700, 400];
+  budgetUtilizationChartView: [number, number] = [1000, 700];
   budgetUtilizationChartColorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
@@ -27,7 +27,7 @@ export class FinanceComponent implements OnInit, OnChanges {
   yAxisLabel = 'Percentage';
 
   // Line chart options for other values
-  otherChartView: [number, number] = [700, 400];
+  otherChartView: [number, number] = [1000, 700];
   otherChartColorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
@@ -41,7 +41,7 @@ export class FinanceComponent implements OnInit, OnChanges {
   lineYAxisLabel = 'Measurements';
 
   // Single chart options for performance index
-  performanceIndexChartView: [number, number] = [700, 400];
+  performanceIndexChartView: [number, number] = [1000, 700];
   performanceIndexChartColorScheme = {
     domain: ['#5AA454']
   };
